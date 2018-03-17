@@ -5,7 +5,7 @@ exercise.countRecords = function(data){
     // YOUR CODE
     // Return the total number of records
     //-------------------------------------------
-    return 'Error: countRecords not implemented'; 
+    return data.length;
 };
 
 exercise.countDistrictCrimes = function(data,district){
@@ -14,7 +14,20 @@ exercise.countDistrictCrimes = function(data,district){
     // Return the number of crimes 
     // for the given district
     //-------------------------------------------
-    return 'Error: countDistrictCrimes not implemented'; 
+
+    var crimeCount = 0;
+
+    data.forEach(add);
+
+    function add(crime){
+        var crimeDistrict = Number(crime[19]);
+        if (crimeDistrict == district){
+            crimeCount++;
+        }
+    }
+
+
+    return crimeCount;
 };
 
 exercise.countPrimaryType = function(data,primaryType){
