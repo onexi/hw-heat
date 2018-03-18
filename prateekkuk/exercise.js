@@ -33,7 +33,12 @@ exercise.countPrimaryType = function(data,primaryType){
     // Return the number of crimes 
     // for the giving primary type
     //-------------------------------------------
-    return 'Error: countPrimaryType not implemented';
+
+    var crimes = data.filter((curr, index, all) => {
+       return curr[13] == primaryType;
+    });
+
+    return crimes.length;
 };
 
 exercise.countLocation = function(data,location){
@@ -42,7 +47,11 @@ exercise.countLocation = function(data,location){
     // Return the number of crimes 
     // for the given location
     //-------------------------------------------
-    return 'Error: countLocation not implemented';
+
+    var locations = data.filter((curr, index, all) => {
+        return curr[15] == location;
+    });
+    return locations.length;
 };
 
 
@@ -58,7 +67,11 @@ exercise.buildLatLngPoint = function(crime){
     // point.longitude = crime[longitudeColumnNumber];
     // return point;    
     //-------------------------------------------    
-    return 'Error: buildLatLngPoint not implemented';
+
+    var point = {};
+    point.latitude = crime[26];
+    point.longitude = crime[28];
+    return point;
 };
 
 
