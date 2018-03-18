@@ -12,7 +12,7 @@ exercise.countDistrictCrimes = function(data,district){
     // Return the number of crimes 
     // for the given district
     //-------------------------------------------
-    const result = data.filter(crime => crime[19] == district);
+    const result = data.filter(crime => crime[19] === district);
     return result.length;
 };
 
@@ -22,7 +22,6 @@ exercise.countPrimaryType = function(data,primaryType){
     // for the giving primary type
     //-------------------------------------------
     const result = data.filter(crime => crime[13] === primaryType);
-    console.log(result.length);
     return result.length;
 };
 
@@ -31,8 +30,7 @@ exercise.countLocation = function(data,location){
     // Return the number of crimes 
     // for the given location
     //-------------------------------------------
-    const result = data.filter(crime => crime[29] === location);
-    console.log(result.length);
+    const result = data.filter(crime => crime[15] === location);
     return result.length;
 };
 
