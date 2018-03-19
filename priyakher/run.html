@@ -6,7 +6,7 @@
 <script src="crime_2012_december.json" ></script>
 
 <!-- load exercise code -->
-<script src="exercise.js"></script>
+<script src="exercise.js"></script> 
 
 <!-- html element for map -->
 <div id="map-canvas" style="height:600px;width:800px"></div>
@@ -14,21 +14,22 @@
 
 <script>
 
+
 // number of records
 var records = exercise.countRecords(chicago.data);
-console.log(records);
+console.log('number of records: '+ records);
 
 // number of district 018 crimes
 var crimes = exercise.countDistrictCrimes(chicago.data,'018');
-console.log(crimes);
+console.log('number of district 018 crimes: '+crimes);
 
 // number of primary type crime 'THEFT'
 var thefts = exercise.countPrimaryType(chicago.data, 'THEFT');
-console.log(thefts);
+console.log('number of primary type crime THEFT:'+thefts);
 
 // number of crimes in 'STREET'
 var locations = exercise.countLocation(chicago.data, 'STREET');
-console.log(locations);
+console.log('number of crimes in STREET:' +locations);
 
 
 var points = [];
