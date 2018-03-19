@@ -5,7 +5,7 @@ exercise.countRecords = function(data){
     // YOUR CODE
     // Return the total number of records
     //-------------------------------------------
-    return 'Error: countRecords not implemented'; 
+    return data.length; 
 };
 
 exercise.countDistrictCrimes = function(data,district){
@@ -14,7 +14,18 @@ exercise.countDistrictCrimes = function(data,district){
     // Return the number of crimes 
     // for the given district
     //-------------------------------------------
-    return 'Error: countDistrictCrimes not implemented'; 
+
+    var numCrimes = 0;
+
+    function addCrimes(crimes){
+        var crimeDistrict = Number(crimes[19]);
+        if (crimeDistrict == district){
+            numCrimes++;
+        }
+    }
+
+    data.forEach(addCrimes);
+    return numCrimes; 
 };
 
 exercise.countPrimaryType = function(data,primaryType){
@@ -23,7 +34,18 @@ exercise.countPrimaryType = function(data,primaryType){
     // Return the number of crimes 
     // for the giving primary type
     //-------------------------------------------
-    return 'Error: countPrimaryType not implemented';
+    
+    var numCrimes = 0;
+
+    function addCrimes(crimes){
+        var crimePrimaryType = Number(crimes[13]);
+        if (crimePrimaryType == primaryType){
+            numCrimes++;
+        }
+    }
+
+    data.forEach(addCrimes);
+    return numCrimes; 
 };
 
 exercise.countLocation = function(data,location){
@@ -32,7 +54,18 @@ exercise.countLocation = function(data,location){
     // Return the number of crimes 
     // for the given location
     //-------------------------------------------
-    return 'Error: countLocation not implemented';
+
+    var numCrimes = 0;
+
+    function addCrimes(crimes){
+        var crimeLocation = Number(crimes[15]);
+        if (crimeLocation == location){
+            numCrimes++;
+        }
+    }
+
+    data.forEach(addCrimes);
+    return numCrimes; 
 };
 
 
@@ -47,8 +80,12 @@ exercise.buildLatLngPoint = function(crime){
     // point.latitude = crime[latitudeColumnNumber];
     // point.longitude = crime[longitudeColumnNumber];
     // return point;    
-    //-------------------------------------------    
-    return 'Error: buildLatLngPoint not implemented';
+    //-------------------------------------------  
+    
+    var point = {};
+    point.latitude = crime[26];
+    point.longitude = crime[28];
+    return point;
 };
 
 
