@@ -5,7 +5,8 @@ exercise.countRecords = function(data){
     // YOUR CODE
     // Return the total number of records
     //-------------------------------------------
-    return 'Error: countRecords not implemented'; 
+    var numRecords = data.length;
+    return numRecords; 
 };
 
 exercise.countDistrictCrimes = function(data,district){
@@ -14,7 +15,16 @@ exercise.countDistrictCrimes = function(data,district){
     // Return the number of crimes 
     // for the given district
     //-------------------------------------------
-    return 'Error: countDistrictCrimes not implemented'; 
+    //data[19] should be District column
+    var count = 0;
+    
+    data.forEach(el => {
+        if (el[19] === district){
+            count++;
+        }        
+    });
+
+    return count; 
 };
 
 exercise.countPrimaryType = function(data,primaryType){
@@ -23,7 +33,14 @@ exercise.countPrimaryType = function(data,primaryType){
     // Return the number of crimes 
     // for the giving primary type
     //-------------------------------------------
-    return 'Error: countPrimaryType not implemented';
+    //primary type is data[13]
+    var count = 0;
+    data.forEach( el =>{
+        if (el[13]===primaryType){
+            count++;
+        }
+    });
+    return count;
 };
 
 exercise.countLocation = function(data,location){
@@ -32,7 +49,13 @@ exercise.countLocation = function(data,location){
     // Return the number of crimes 
     // for the given location
     //-------------------------------------------
-    return 'Error: countLocation not implemented';
+    var count =0;
+    data.forEach(el => {
+        if(el[15]===location){
+            count++;
+        }
+    });
+    return count;
 };
 
 
@@ -47,8 +70,13 @@ exercise.buildLatLngPoint = function(crime){
     // point.latitude = crime[latitudeColumnNumber];
     // point.longitude = crime[longitudeColumnNumber];
     // return point;    
-    //-------------------------------------------    
-    return 'Error: buildLatLngPoint not implemented';
+    //-------------------------------------------
+    
+    var point = {};
+    point.latitude = crime[26];
+    point.longitude = crime[28];
+    
+    return point;
 };
 
 
