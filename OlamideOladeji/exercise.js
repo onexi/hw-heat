@@ -6,7 +6,7 @@ exercise.countRecords = function(data){
     // Return the total number of records
     //-------------------------------------------
     return data.length
-    return 'Error: countRecords not implemented'; 
+    //return 'Error: countRecords not implemented'; 
 };
 
 exercise.countDistrictCrimes = function(data,district){
@@ -25,7 +25,7 @@ exercise.countDistrictCrimes = function(data,district){
       });
 
     return countCrimes
-    return 'Error: countDistrictCrimes not implemented'; 
+    //return 'Error: countDistrictCrimes not implemented'; 
 };
 
 exercise.countPrimaryType = function(data,primaryType){
@@ -44,7 +44,7 @@ exercise.countPrimaryType = function(data,primaryType){
       });
 
     return countCrimesPrimary
-    return 'Error: countPrimaryType not implemented';
+    //return 'Error: countPrimaryType not implemented';
 };
 
 exercise.countLocation = function(data,location){
@@ -63,7 +63,7 @@ exercise.countLocation = function(data,location){
       });
 
     return countCrimesLoc
-    return 'Error: countLocation not implemented';
+    //return 'Error: countLocation not implemented';
 };
 
 
@@ -84,7 +84,7 @@ exercise.buildLatLngPoint = function(crime){
     point.latitude = crime[29][1];
     point.longitude = crime[29][2];
     return point;    
-    return 'Error: buildLatLngPoint not implemented';
+    //return 'Error: buildLatLngPoint not implemented';
 };
 
 
