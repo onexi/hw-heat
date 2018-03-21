@@ -52,7 +52,6 @@ exercise.countLocation = function(data,location){
         };
     });
     return counter;
-    return 'Error: countLocation not implemented';
 };
 
 
