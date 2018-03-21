@@ -5,7 +5,7 @@ exercise.countRecords = function(data){
     // YOUR CODE
     // Return the total number of records
     //-------------------------------------------
-    return 'Error: countRecords not implemented'; 
+    return chicago.data.length; 
 };
 
 exercise.countDistrictCrimes = function(data,district){
