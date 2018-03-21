@@ -1,3 +1,4 @@
+// Jocelyn Lorrey 3/21/18 
 var exercise = {};
 
 exercise.countRecords = function(data){
@@ -55,9 +56,11 @@ exercise.countLocation = function(data,location){
     //for crime in each record[i][29]:
     //if crimeLoc==location: count+=0
     //return count
+    //location = 29
+    //location descrition = 15
     var count = 0;
     chicago.data.forEach(function(crime) {
-        if (crime[29] == location) {
+        if (crime[15] == location) {
             count+=1;
         }
     });
