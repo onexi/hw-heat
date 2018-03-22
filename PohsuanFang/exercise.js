@@ -22,7 +22,7 @@ exercise.countDistrictCrimes = function(data,district){
     //-------------------------------------------
 var count=0;
  data.forEach(function(item,i){
-    if (item[11].includes(district)==true){count+=1;}
+    if (item[19].includes(district)==true){count+=1;}
  });
     return count; 
     
