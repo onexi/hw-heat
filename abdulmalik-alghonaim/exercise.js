@@ -5,7 +5,6 @@ exercise.countRecords = function(data){
     // YOUR CODE
     // Return the total number of records
     //-------------------------------------------
-
     return data.length; 
 };
 
