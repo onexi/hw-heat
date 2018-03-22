@@ -15,6 +15,8 @@ exercise.countDistrictCrimes = function(data,district){
     // Return the number of crimes 
     // for the given district
     //-------------------------------------------
+    var result = data.filter(function(d){return d[19] === district});
+    return result.length;
     return 'Error: countDistrictCrimes not implemented'; 
 };
 
