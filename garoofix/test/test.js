@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var ex = require('./ex.js').load('./solution.js');
+//var ex = require('./ex.js').load('./solution.js');
 
 describe('Call 1st Function', function() {
 	it('Match Response Message', function() {
