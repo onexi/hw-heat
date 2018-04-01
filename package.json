@@ -1,0 +1,19 @@
+{
+  "name": "hw-heat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sssingh77/hw-heat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sssingh77/hw-heat/issues"
+  },
+  "homepage": "https://github.com/sssingh77/hw-heat#readme"
+}
