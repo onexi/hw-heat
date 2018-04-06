@@ -2,65 +2,54 @@ var exercise = {};
 
 exercise.countRecords = function(data){
     //-------------------------------------------
-    
-    return Object.keys(chicago.data).length;
-
+    // YOUR CODE
     // Return the total number of records
     //-------------------------------------------
-   // return 'Error: countRecords not implemented'; 
+    var num = data.length;
+    return num; 
 };
 
 exercise.countDistrictCrimes = function(data,district){
     //-------------------------------------------
-    var countingDistrict = data.filter(function(report){
-        return report[18] == district;
-    });
-
-    var crimes = {};
-    crimes.district = district;
-    crimes.reports = counting.length;
-
-    return crimes;
-
+    // YOUR CODE
     // Return the number of crimes 
     // for the given district
     //-------------------------------------------
-    //return 'Error: countDistrictCrimes not implemented'; 
+    var matching;
+    matching = data.filter((element) => {
+        var comp = (element[19] === district);
+        return comp
+    })
+    return matching.length; 
 };
 
 exercise.countPrimaryType = function(data,primaryType){
     //-------------------------------------------
-    var countingPrimary = data.filter(function(report2){
-        return report2[18] == primary;
-    });
-
-    var crimes = {};
-    crimes.primary = primary;
-    crimes.reports = countingPrimary.length;
-
-    return crimes;
-
+    // YOUR CODE
     // Return the number of crimes 
-    // for the giving primary type
+    // for the given primary type
     //-------------------------------------------
-    //return 'Error: countPrimaryType not implemented';
+    var matching;
+    matching = data.filter((element) => {
+        var comp = (element[13] === primaryType);
+        return comp
+    });
+    return matching.length;
 };
 
 exercise.countLocation = function(data,location){
     //-------------------------------------------
-    var countingLocation = data.filter(function(report3){
-        return report3[18] == location;
-    });
-
-    var crimes = {};
-    crimes.location = location;
-    crimes.reports = countingLocation.length;
-
-    return crimes;
+    // YOUR CODE
     // Return the number of crimes 
     // for the given location
     //-------------------------------------------
-    //return 'Error: countLocation not implemented';
+    var matching;
+    matching = data.filter((element) => {
+        var comp = (element[15] === location);
+        return comp
+    });
+                                                        
+    return matching.length;
 };
 
 
@@ -69,13 +58,18 @@ exercise.buildLatLngPoint = function(crime){
     // YOUR CODE
     // build the point for the given crime
     // 
+    // For example:
     //
-    var point = {};    
-    point.latitude = crime[latitudeColumnNumber];
-    point.longitude = crime[longitudeColumnNumber];
-    return point;    
+    // var point = {};    
+    // point.latitude = crime[latitudeColumnNumber];
+    // point.longitude = crime[longitudeColumnNumber];
+    // return point;    
     //-------------------------------------------    
-    //return 'Error: buildLatLngPoint not implemented';
+    var point = {};
+    point.latitude = crime[26];
+    point.longitude = crime[28];
+    return point;
+
 };
 
 
